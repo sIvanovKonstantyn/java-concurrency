@@ -27,9 +27,7 @@ public class SimpleWorker implements Runnable {
 
             clientSocket.close();
             Thread.sleep(10000);
-            synchronized (this) {
-                notifyAll();
-            }
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
