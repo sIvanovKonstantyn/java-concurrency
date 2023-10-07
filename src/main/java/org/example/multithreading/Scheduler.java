@@ -1,4 +1,4 @@
-package org.example;
+package org.example.multithreading;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

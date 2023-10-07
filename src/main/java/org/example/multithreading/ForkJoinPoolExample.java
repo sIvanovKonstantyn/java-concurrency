@@ -1,4 +1,4 @@
-package org.example;
+package org.example.multithreading;
 
 import java.util.ArrayList;
 import java.util.List;
