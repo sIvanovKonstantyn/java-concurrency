@@ -3,10 +3,8 @@ package org.example.locks;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
-public class ThreadPoolExecutorHttpServer {
+public class HttpServer {
     private static final UserBalanceInMemoryDB dbInstance = UserBalanceInMemoryDB.getInstance();
     private static final Thread monitoring = new Thread(() -> {
         while (true) {
@@ -20,7 +18,7 @@ public class ThreadPoolExecutorHttpServer {
 
     public static void main(String[] args) {
         monitoring.start();
-        new ThreadPoolExecutorHttpServer().start();
+        new HttpServer().start();
     }
 
     private void start() {
