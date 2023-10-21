@@ -22,7 +22,7 @@ public class LimitedWorker implements Runnable {
     private void processJob() {
         try(OutputStream output = clientSocket.getOutputStream()) {
             StringBuilder response = new StringBuilder();
-            String responseBody = "Hello from thread [" + Thread.currentThread().getId() + "]";
+            String responseBody = "Hello from thread [" + Thread.currentThread().threadId() + "]";
             addHeader(response, responseBody.length());
             response.append(responseBody);
             output.write(response.toString().getBytes());
